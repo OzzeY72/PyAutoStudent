@@ -54,7 +54,16 @@ class MainWindow(QMainWindow):
     def button_write_file_clicked(self):
         data = {
             "programm": self.application_type.currentText(),
-            "path": self.filename
+            "path": self.filename,
+            "join_cord_x": 0,
+            "join_cord_y": 0,
+            "first_launch": True,
+            "videocheckbox_cord_x": 0,
+            "videocheckbox_cord_y": 0,
+            "connect_cord_x": 0,
+            "connect_cord_y": 0,
+            "connectfinal_cord_x": 0,
+            "connectfinal_cord_y": 0,
         }
         with open('settings.json', 'w') as f:
             json.dump(data, f)
